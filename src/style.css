@@ -2,17 +2,21 @@ body {
   margin: 0;
   padding: 0;
 }
+
 header {
   text-align: center;
   color: rgba(0, 0, 0, 0);
 }
+
 section.body {
   margin: 0 auto;
   width: 90%;
 }
+
 nav {
   margin-bottom: 10px;
 }
+
 a,
 a:focus,
 a:hover,
@@ -20,10 +24,14 @@ a:active {
   color: #000;
   text-decoration: none;
 }
+
 ul {
   padding-left: 0;
   list-style: none;
+  display: flex;
+  justify-content: space-between;
 }
+
 ul > li {
   border: solid 1px #ccc;
   padding: 8px;
@@ -31,8 +39,14 @@ ul > li {
   display: inline-block;
   text-align: center;
 }
-
+.card-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+}
 .card {
+  padding: 10px;
   border: solid 1px #999;
   border-radius: 8px;
   width: 250px;
