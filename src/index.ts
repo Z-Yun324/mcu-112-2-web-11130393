@@ -8,3 +8,6 @@ console.log("Product Name = ", productNg);
 
 const isShow = true;
 console.log("Is Show = ", isShow);
+
+let createDate = undefined;
+console.log("Create Date", createDate);
