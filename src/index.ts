@@ -11,3 +11,6 @@ console.log("Is Show = ", isShow);
 
 let createDate = new Date();
 console.log("Create Date", createDate);
+
+let modifyDate: Date | undefined = undefined;
+console.log("Modify Date", modifyDate);
