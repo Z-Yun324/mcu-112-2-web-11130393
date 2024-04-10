@@ -19,11 +19,14 @@ const products = [
   ),
 ];
 
-setProductDisplay(products[1], false);
+products[1].setDisplay(false);
 
 console.log(products);
 console.table(products);
 
+/*
+//利用函式設定產品是否顯示
 function setProductDisplay(product: Product, isShow: boolean): void {
   product.isShow = isShow;
 }
+setProductDisplay(products[1], false);*/

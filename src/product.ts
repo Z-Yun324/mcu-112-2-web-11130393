@@ -8,4 +8,9 @@ export class Product {
     public createDate: Date,
     public modifyDate?: Date
   ) {}
+
+  //利用類別方法設定產品是否顯示
+  setDisplay(isShow: boolean): void {
+    this.isShow = isShow;
+  }
 }
