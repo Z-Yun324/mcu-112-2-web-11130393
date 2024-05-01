@@ -19,6 +19,7 @@ export class ProductCardComponent {
   @Input({ transform: numberAttribute }) price!: number;
 
   @Output() isShowChange = new EventEmitter<boolean>();
+
   @HostBinding('class')
   class = 'product-card';
 
