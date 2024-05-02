@@ -14,17 +14,16 @@ export class ProductCardComponent {
   @Input() authors!: string[];
   @Input() company!: string;
   @Input() imgUrl!: string;
-  @Input({ transform: booleanAttribute }) isShow!: boolean;
+
+  @Input({ transform: booleanAttribute })
+  isShow!: boolean;
+
   @Input() createDate!: Date;
   @Input({ transform: numberAttribute }) price!: number;
-
-  @Output() isShowChange = new EventEmitter<boolean>();
 
   @HostBinding('class')
   class = 'product-card';
 
-  onSetDisplay(isShow: boolean): void {
-    //this.isShow = isShow;
-    this.isShowChange.emit(isShow);
-  }
+  @Output()
+  view = new EventEmitter<void>();
 }
