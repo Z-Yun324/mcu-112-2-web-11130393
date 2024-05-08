@@ -12,16 +12,15 @@ import { ProductService } from './../services/product.service';
   styleUrl: './product-page.component.css',
 })
 export class ProductPageComponent implements OnInit {
-  private productService!: ProductService;
+  router = inject(Router);
+
+  private productService = inject(ProductService);
 
   products!: Product[];
 
   ngOnInit(): void {
-    this.productService = new ProductService();
     this.products = this.productService.getList();
   }
-
-  router = inject(Router);
 
   onView(product: Product): void {
     this.router.navigate(['product', 'view', product.id]);
