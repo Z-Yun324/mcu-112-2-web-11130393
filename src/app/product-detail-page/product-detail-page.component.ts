@@ -12,10 +12,6 @@ import { ProductService } from '../services/product.service';
   styleUrl: './product-detail-page.component.css',
 })
 export class ProductDetailPageComponent implements OnInit {
-  ngOnInit(): void {
-    this.product = this.productService.getById(this.id);
-  }
-
   @Input({ transform: numberAttribute })
   id!: number;
 
@@ -25,8 +21,17 @@ export class ProductDetailPageComponent implements OnInit {
 
   private productService = inject(ProductService);
 
+  ngOnInit(): void {
+    this.product = this.productService.getById(this.id);
+  }
+
   onEdit(): void {
     this.router.navigate(['product', 'form', this.product.id]);
+  }
+
+  onRemove(): void {
+    this.productService.remove(this.product.id);
+    this.router.navigate(['products']);
   }
 
   onBack(): void {
