@@ -51,4 +51,8 @@ export class ProductService {
   getList(): Product[] {
     return this._data;
   }
+  add(product: Product) {
+    const id = this._data.length === 0 ? 1 : Math.max(...this._data.map(({ id }) => id)) + 1;
+    this._data.push(new Product({ ...product, id }));
+  }
 }
