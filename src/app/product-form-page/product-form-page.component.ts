@@ -17,6 +17,17 @@ export class ProductFormPageComponent implements OnInit {
   product!: Product;
 
   ngOnInit(): void {
-    this.route.data.pipe(map(({ product }: Data) => product)).subscribe((product) => (this.product = product));
+    this.route.paramMap.subscribe();
+
+    this.route.data.subscribe((data) => (this.product = data['product']));
+
+    this.route.data
+      .pipe(
+        map((data: Data) => data['product'])
+        //..
+        //..
+        //..
+      )
+      .subscribe((product) => (this.product = product));
   }
 }
