@@ -58,6 +58,10 @@ export class ProductService {
     return of(product);
   }
 
+  getCount(name: string | undefined): Observable<number> {
+    throw new Error('NO');
+  }
+
   add(product: Product): Observable<Product> {
     const id = this._data.length === 0 ? 1 : Math.max(...this._data.map(({ id }) => id)) + 1;
     const newProduct = new Product({ ...product, id });

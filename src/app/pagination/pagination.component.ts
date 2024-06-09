@@ -23,7 +23,6 @@ export class PaginationComponent implements OnChanges {
   //當前頁
   @Input({ transform: numberAttribute })
   pageIndex = 1;
-
   @Output()
   pageIndexChange = new EventEmitter<number>();
 
