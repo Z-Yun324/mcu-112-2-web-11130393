@@ -22,7 +22,7 @@ export class ProductPageComponent {
 
   readonly products$ = this.refresh$.pipe(
     startWith(undefined),
-    switchMap(() => this.productService.getList())
+    switchMap(() => this.productService.getList(undefined, 1, 5))
   );
 
   onAdd(): void {
