@@ -57,6 +57,4 @@
     <button type="button" (click)="onCancel()">取消</button>
     <button type="button" [disabled]="form.invalid" (click)="onSave()" class="save">儲存</button>
   </div>
-  <pre>{{ form.invalid | json }}</pre>
-  <pre>{{ form.value | json }}</pre>
 </div>
