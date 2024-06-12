@@ -55,3 +55,8 @@ button.save {
   background-color: #007bff;
   color: white;
 }
+
+button.save:disabled {
+  background-color: #ccc;
+  color: #999;
+}
