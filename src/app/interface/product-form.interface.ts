@@ -6,5 +6,5 @@ export interface IProductFrom {
   authors: FormArray<FormControl<string | null>>;
   company: FormControl<string | null>;
   isShow: FormControl<boolean>;
-  price: FormControl<string | null>;
+  price: FormControl<number | null>;
 }

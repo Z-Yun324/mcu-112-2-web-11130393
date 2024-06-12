@@ -18,5 +18,5 @@ export class Product {
 
   createDate!: Date;
 
-  price!: string;
+  price!: number;
 }
